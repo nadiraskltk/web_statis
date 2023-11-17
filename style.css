@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background: url(img/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: white;
+    box-shadow: 0 5px 10px gray;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+ }
+
+ header .logo {
+    font-weight: bolder;
+    font-size: 50px;
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+ }
+
+ header .navbar ul{
+    list-style: none;
+ }
+
+ header .navbar ul li{
+    position: relative;
+    float: left;
+ }
+
+ header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+ }
+
+ header .navbar ul li a:hover {
+    background: #333;
+    color: #fff;
+ }
+
+ header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+ }
+
+ header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid gray;
+ }
+
+ header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+ }
+
+
+ header .navbar ul li:focus-within > ul,
+ header .navbar ul li:hover > ul{
+    display: initial;
+ }
+
+ #menu-bar {
+    display: none;
+ }
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-family: 'Lucida sans regular';
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #fff;
+    width: 100%;
+    line-height: 50px;
+}
+
+/* Home */
+.home{
+    background-image: url(img/beranda.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home a{
+    color: white;
+    padding: 8px 10px;
+    margin-top: 18rem;
+    font-size: 1.4rem;
+    background-color: gray;
+    border-radius: 10px
+}
+/* END */
+
+/* about-profil */
+#profil{
+    width: 80%;
+    display: flex;
+    height: 60vh;
+    border-bottom: 10px solid white;
+}
+
+.img-a{
+    padding: 30px;
+}
+
+.a p{
+    text-align: justify;
+}
+/* end */
+
+/* Sejarah */
+.b {
+    display: block;
+    margin: auto;
+    width: 80%;
+    text-align: justify;
+}
+
+.b h1{
+    text-align: center;
+}
+
+/* visi-misi */
+#visimisi{
+    width: 80%;
+    display: flex;
+    text-align: justify;
+    height: 100vh;
+}
+
+.c {
+    padding-top: 300px;
+    margin-right: 4rem;
+}
+/* end */
+
+/* tujuan */
+.e {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    height: 100vh;
+}
+/* end */
+
+/* Struktur */
+#struktur{
+    width: 80%;
+    height: 100vh;
+    text-align: center;
+    display: block;
+}
+
+.f-o img{
+    width: 100%;
+}
+/* end */
+
+/* report */
+.g {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.g-a {
+    box-shadow: 0 4px 8px 0 rgba(255, 1, 1, 0.274);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: #ffffff69;
+    color: black;
+}
+
+.g-a img{
+    width: 100%;
+}
+
+.g-a img:hover{
+    transform: scale(0.90);
+    transition: all 0.55s ease-in-out;
+}
+
+/* end */
+
+/* produk */
+#product {
+    width: 80%;
+    display: flex;
+}
+.product img{
+    width: 100%;
+}
+/* end */
+
+/* registrasi */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url("background.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(15px) brightness(80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/* animations: start */
+input:focus~label,
+input:valid~label {
+    top: -5px;
+}
+
+/* animation:end */
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget {
+    margin: -10px 0 17px;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forget label input {
+    margin-right: 3px;
+}
+
+.forget a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+    .form-box {
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+
+/* contact */
+#contact{
+    background-color: #333;
+    padding: 50px 0px 50px 0px;
+}
+
+.footer{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.footer-section{
+    width: 20%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+h4{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+    width: 100%;
+    line-height: 50px;
+}
+
+#copyright{
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+    margin-top: 50px;
+}
+
+ @media(max-width:991px){
+    body {
+        width: 100%;
+    }
+
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: 1px solid #333;
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+
+    /* profil */
+    #profil {
+        flex-wrap: wrap;
+    }
+    .img-a img{
+        width: 100%;
+    }
+
+    .g {
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    /* end */
+
+    /* sejarah */
+    #visimisi {
+        flex-wrap: wrap;
+        height: 150vh;
+    }
+    .c {
+        margin: 0%;
+    }
+    /* end */
+
+    /* Tujuan */
+    .tujuan {
+        height: 10vh;
+    }
+    /* End */
+ }
+
+
+ 
